@@ -281,8 +281,10 @@ func apply_passive(t):
 		match c.passive_effect:
 			c.effects.dealDamage:
 				i.take_damage(c.passive_magnitude)
+				await get_tree().create_timer(.4 / float(t.size())).timeout
 			c.effects.restoreHealth:
 				i.restore_hp(c.passive_magnitude)
+				await get_tree().create_timer(.2).timeout
 			c.effects.changeSP:
 				i.player.changeSP(c.passive_magnitude)
 			c.effects.changeDamage:
@@ -293,14 +295,18 @@ func apply_passive(t):
 				print("Drawing Card")
 				player.draw(c.passive_magnitude)
 			c.effects.drawRefcard:
-				for x in range(1, c.passive_magnitude):
+				for x in range(0, c.passive_magnitude):
 					var pool = []
 					for j in c.refcard:
 						pool + player.deck.search_name(j.name)
-					print("Adding " + c.refcard[0].name + " to Hand")
-					player.add_to_hand(c.refcard[0])
+					if pool.size() > 0:
+						print("Adding " + c.refcard[0].name + " to Hand")
+						player.add_to_hand(c.refcard[0])
+					else:
+						print("Card not found in deck!")
+						return #Cards not found
 			c.effects.createRefcard:
-				for x in range(1, c.passive_magnitude):
+				for x in range(0, c.passive_magnitude):
 					print("Adding " + c.refcard[0].name + " to Hand")
 					player.add_to_hand(c.refcard[0])
 			c.effects.setExtraAttack:
@@ -325,12 +331,15 @@ func take_damage(n):
 	hp -= n
 	if hp <= 0:
 		await get_tree().create_timer(0.4).timeout
-		$AnimationPlayer.play("die")
+		die()
 	else:
 		await get_tree().create_timer(0.4).timeout
 		$AnimationPlayer.play("take_damage")
 	show_damage(n)
 	update_numbers()
+
+func die():
+	$AnimationPlayer.play("die")
 
 func show_damage(n):
 	$Damage/Label.text = str(n)

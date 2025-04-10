@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="card" load_steps=2 format=3 uid="uid://dv32th76ld1pi"]
+[gd_resource type="Resource" script_class="card" load_steps=5 format=3 uid="uid://dv32th76ld1pi"]
 
 [ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_ap4lj"]
+[ext_resource type="Resource" uid="uid://u6uxatg6pkso" path="res://Cards/Base/Panacea.tres" id="2_w37jh"]
+[ext_resource type="Resource" uid="uid://crttfreppqkq5" path="res://Cards/Coral Beach/Thiefmon.tres" id="3_llqke"]
+[ext_resource type="Resource" uid="uid://bobb7455rsixy" path="res://Cards/Coral Beach/Addax.tres" id="4_gmae6"]
 
 [resource]
 script = ExtResource("1_ap4lj")
@@ -13,14 +16,14 @@ duration = 2
 element = 5
 category = 0
 passive_name = ""
-passive_description = ""
-passive_trigger = 0
-passive_target = 0
+passive_description = "When this card leaves the field, draw one [u]Lifeguard Deen[/u], [u]Tinnie[/u], or [u]Lifeguard Bean[/u] from your deck."
+passive_trigger = 3
+passive_target = 7
 passive_filter = 0
 passive_filter_magnitude = 0
-passive_effect = 0
-passive_magnitude = 0
-refcard = Array[ExtResource("1_ap4lj")]([])
-set_name = 0
+passive_effect = 5
+passive_magnitude = 1
+refcard = Array[ExtResource("1_ap4lj")]([ExtResource("2_w37jh"), ExtResource("3_llqke"), ExtResource("4_gmae6")])
+set_name = 1
 set_number = ""
 rarity = 0
