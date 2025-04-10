@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://ce1ui2xf6bwle"]
+
+[ext_resource type="Texture2D" uid="uid://dd1g01cmvkail" path="res://Art/Unit/Clione.png" id="1_ktk5g"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_ol5nf"]
+
+[resource]
+script = ExtResource("1_ol5nf")
+type = 0
+name = "Clione"
+art = ExtResource("1_ktk5g")
+cost = 4
+hp = 100
+attack = 20
+duration = 0
+element = 2
+category = 0
+passive_name = "Sea Angel Magic"
+passive_description = "After attacking, deal 20 damage to all enemies."
+passive_trigger = 0
+passive_target = 5
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 20
+refcard = Array[ExtResource("1_ol5nf")]([])
+set_name = 1
+set_number = "7"
+rarity = 0

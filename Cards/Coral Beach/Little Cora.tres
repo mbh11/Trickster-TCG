@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://c5xn1qiit1ga3"]
+
+[ext_resource type="Texture2D" uid="uid://dvw6ght176jic" path="res://Art/Unit/Little Cora.png" id="1_lomjc"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="2_3tqgu"]
+
+[resource]
+script = ExtResource("2_3tqgu")
+type = 0
+name = "Little Cora"
+art = ExtResource("1_lomjc")
+cost = 2
+hp = 60
+attack = 10
+duration = 0
+element = 4
+category = 3
+passive_name = "Cora Dance"
+passive_description = "When summoned, all allied cards gain 10 attack."
+passive_trigger = 1
+passive_target = 4
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 3
+passive_magnitude = 10
+refcard = Array[ExtResource("2_3tqgu")]([])
+set_name = 1
+set_number = "4"
+rarity = 0

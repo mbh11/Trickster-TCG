@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://cj722kmhc3h7s"]
+
+[ext_resource type="Texture2D" uid="uid://b1i4g2vgh37kf" path="res://Art/Unit/Bad Fury.png" id="1_8iscg"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="3_koa6m"]
+
+[resource]
+script = ExtResource("3_koa6m")
+type = 0
+name = "Bad Fury"
+art = ExtResource("1_8iscg")
+cost = 1
+hp = 40
+attack = 20
+duration = 0
+element = 3
+category = 0
+passive_name = "Fury Swarm"
+passive_description = "When this card is defeated, draw 1 card."
+passive_trigger = 3
+passive_target = 7
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 4
+passive_magnitude = 1
+refcard = Array[ExtResource("3_koa6m")]([])
+set_name = 1
+set_number = "3"
+rarity = 0

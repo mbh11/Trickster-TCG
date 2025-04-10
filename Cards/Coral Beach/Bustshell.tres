@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://ciwwf07umtmi7"]
+
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_3gyku"]
+[ext_resource type="Texture2D" uid="uid://bd7sxtd6bpk43" path="res://Art/Unit/Bustshell.png" id="1_gdf3c"]
+
+[resource]
+script = ExtResource("1_3gyku")
+type = 0
+name = "Bustshell"
+art = ExtResource("1_gdf3c")
+cost = 3
+hp = 60
+attack = 60
+duration = 0
+element = 1
+category = 4
+passive_name = "Clamp"
+passive_description = "After attacking, the target loses 10 attack."
+passive_trigger = 0
+passive_target = 9
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 3
+passive_magnitude = -10
+refcard = Array[ExtResource("1_3gyku")]([])
+set_name = 1
+set_number = "5"
+rarity = 0

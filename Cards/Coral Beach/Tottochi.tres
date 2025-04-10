@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://bubowk7n34pqy"]
+
+[ext_resource type="Texture2D" uid="uid://benvb48e7nj65" path="res://Art/Unit/Tottochi.png" id="1_s24dn"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="2_ri4c8"]
+
+[resource]
+script = ExtResource("2_ri4c8")
+type = 1
+name = "Tottochi"
+art = ExtResource("1_s24dn")
+cost = 1
+hp = 50
+attack = 30
+duration = 0
+element = 1
+category = 0
+passive_name = "Spinning Headbutt"
+passive_description = "After attacking, gain 10 attack."
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 3
+passive_magnitude = 10
+refcard = Array[ExtResource("2_ri4c8")]([])
+set_name = 1
+set_number = "2"
+rarity = 0

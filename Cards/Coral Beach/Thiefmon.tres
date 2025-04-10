@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="card" load_steps=4 format=3 uid="uid://crttfreppqkq5"]
+
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_ut2rp"]
+[ext_resource type="Texture2D" uid="uid://bmg0f3ju1fk2o" path="res://Art/Unit/Thiefmon.png" id="1_y3pvf"]
+[ext_resource type="Resource" uid="uid://u6uxatg6pkso" path="res://Cards/Base/Panacea.tres" id="2_jyev4"]
+
+[resource]
+script = ExtResource("1_ut2rp")
+type = 0
+name = "Thiefmon"
+art = ExtResource("1_y3pvf")
+cost = 2
+hp = 60
+attack = 40
+duration = 0
+element = 3
+category = 1
+passive_name = "Thievery"
+passive_description = "After attacking, gain 1 [u]Panacea[/u]."
+passive_trigger = 0
+passive_target = 7
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 5
+passive_magnitude = 1
+refcard = Array[ExtResource("1_ut2rp")]([ExtResource("2_jyev4")])
+set_name = 1
+set_number = "8"
+rarity = 0

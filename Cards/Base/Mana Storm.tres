@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://mphrbspsjxqt"]
+
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_5jxd3"]
+[ext_resource type="Texture2D" uid="uid://c01s3dg7m6wia" path="res://Art/Skill/Skill_Mana_Storm_Big.webp" id="1_wx2ne"]
+
+[resource]
+script = ExtResource("1_5jxd3")
+type = 4
+name = "Mana Storm"
+art = ExtResource("1_wx2ne")
+cost = 4
+hp = 0
+attack = 0
+duration = 0
+element = 2
+category = 0
+passive_name = ""
+passive_description = "Deal 40 damage to all enemies."
+passive_trigger = 1
+passive_target = 5
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 40
+refcard = Array[ExtResource("1_5jxd3")]([])
+set_name = 0
+set_number = ""
+rarity = 0

@@ -1,0 +1,350 @@
+[gd_scene load_steps=18 format=3 uid="uid://e10rhyk8vaf2"]
+
+[ext_resource type="Texture2D" uid="uid://ndgwjyuaqkpf" path="res://Art/Trickster/Bard.png" id="1_t0sj2"]
+[ext_resource type="Texture2D" uid="uid://h78v5cc2in6d" path="res://Art/Parts/Overlay Sense.png" id="2_ghbnt"]
+[ext_resource type="FontFile" uid="uid://ckueavn23q31j" path="res://System/tahomabd.ttf" id="3_ljo1r"]
+[ext_resource type="Texture2D" uid="uid://clg3sosuptljj" path="res://Art/Parts/Icons/Base.png" id="4_nvt6q"]
+[ext_resource type="Texture2D" uid="uid://d31e3tesxd327" path="res://Art/Parts/Border.png" id="5_oha0f"]
+[ext_resource type="FontFile" uid="uid://cny6q1afmskf3" path="res://System/tahoma.ttf" id="6_uh68l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yvxmq"]
+line_spacing = 5.0
+font = ExtResource("3_ljo1r")
+font_size = 28
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ei08a"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dio0"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fueim"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 50
+font_color = Color(0.741176, 0.823529, 1, 1)
+outline_size = 10
+outline_color = Color(0.27451, 0.427451, 0.811765, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjt0r"]
+line_spacing = 0.0
+font = ExtResource("6_uh68l")
+font_size = 12
+font_color = Color(0.738281, 0.820313, 0.996094, 1)
+outline_size = 10
+outline_color = Color(0.28125, 0.433594, 0.8125, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3u86w"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 40
+font_color = Color(1, 0.690196, 0.694118, 1)
+outline_size = 10
+outline_color = Color(0.631373, 0.270588, 0.34902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jkskl"]
+line_spacing = 0.0
+font = ExtResource("6_uh68l")
+font_size = 12
+font_color = Color(0.996094, 0.6875, 0.691406, 1)
+outline_size = 10
+outline_color = Color(0.628906, 0.269531, 0.347656, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_o6ipu"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 40
+font_color = Color(0.760784, 0.760784, 0.760784, 1)
+outline_size = 10
+outline_color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_75xec"]
+line_spacing = 0.0
+font = ExtResource("6_uh68l")
+font_size = 14
+font_color = Color(0.760784, 0.760784, 0.760784, 1)
+outline_size = 10
+outline_color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ft1a4"]
+line_spacing = 0.0
+font = ExtResource("3_ljo1r")
+font_size = 50
+font_color = Color(0.741176, 1, 0.690196, 1)
+outline_size = 10
+outline_color = Color(0.270588, 0.631373, 0.32549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2rtbw"]
+line_spacing = 0.0
+font = ExtResource("6_uh68l")
+font_size = 12
+font_color = Color(0.741176, 1, 0.690196, 1)
+outline_size = 10
+outline_color = Color(0.270588, 0.631373, 0.32549, 1)
+
+[node name="CardFront" type="Control"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 460.0
+offset_bottom = 485.0
+
+[node name="Art" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 65.0
+offset_right = 210.0
+offset_bottom = 485.0
+grow_horizontal = 2
+texture = ExtResource("1_t0sj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Overlay" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(230, 120)
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 700.0
+texture = ExtResource("2_ghbnt")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 440.0
+offset_bottom = 70.0
+text = "Blue Penguin"
+label_settings = SubResource("LabelSettings_yvxmq")
+vertical_alignment = 1
+
+[node name="Category" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = 278.0
+offset_right = 32.0
+offset_bottom = 295.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Category"
+label_settings = SubResource("LabelSettings_ei08a")
+horizontal_alignment = 1
+
+[node name="Set" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -55.0
+offset_right = 53.0
+offset_bottom = -28.0
+grow_vertical = 0
+texture = ExtResource("4_nvt6q")
+stretch_mode = 2
+
+[node name="SetNumber" type="Label" parent="Set"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 17.5
+offset_top = -12.5
+offset_right = 217.5
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "1/1"
+label_settings = SubResource("LabelSettings_4dio0")
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -73.0
+offset_top = 30.0
+offset_right = -39.0
+offset_bottom = 60.0
+grow_horizontal = 0
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 700.0
+texture = ExtResource("5_oha0f")
+
+[node name="DescBox" type="VBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 515.0
+offset_right = 450.0
+offset_bottom = 625.0
+alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="DescBox"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_uh68l")
+theme_override_fonts/bold_font = ExtResource("3_ljo1r")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[center][b]Bolster Ballad[/b]: Once per turn, when playing a [u]Magic[/u] monster or skill, gain 1 MP."
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+shortcut_keys_enabled = false
+
+[node name="Cost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 68.0
+offset_right = 85.0
+offset_bottom = 130.0
+text = "1"
+label_settings = SubResource("LabelSettings_fueim")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Cost"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -17.0
+offset_right = 23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SP"
+label_settings = SubResource("LabelSettings_qjt0r")
+
+[node name="HP" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_top = 65.0
+offset_right = -51.0
+offset_bottom = 115.0
+grow_horizontal = 0
+pivot_offset = Vector2(75, 0)
+text = "120"
+label_settings = SubResource("LabelSettings_3u86w")
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="HP"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 28.5
+offset_top = -12.0
+offset_right = 44.5
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "HP"
+label_settings = SubResource("LabelSettings_jkskl")
+
+[node name="Damage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = 66.0
+offset_right = 95.0
+offset_bottom = 128.0
+grow_vertical = 2
+pivot_offset = Vector2(25, 31)
+text = "10"
+label_settings = SubResource("LabelSettings_o6ipu")
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="Damage"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -14.0
+offset_right = 13.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Attack"
+label_settings = SubResource("LabelSettings_75xec")
+
+[node name="Duration" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 65.0
+offset_right = -40.0
+offset_bottom = 115.0
+grow_horizontal = 0
+pivot_offset = Vector2(50, 0)
+text = "2"
+label_settings = SubResource("LabelSettings_ft1a4")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Duration"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.5
+offset_top = -17.0
+offset_right = 14.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Turns"
+label_settings = SubResource("LabelSettings_2rtbw")

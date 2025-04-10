@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://oo22hswqpqkj"]
+
+[ext_resource type="Texture2D" uid="uid://1855ubo2hj34" path="res://Art/Trickster/Librarian.png" id="1_3ubkn"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_alvkl"]
+
+[resource]
+script = ExtResource("1_alvkl")
+type = 6
+name = "Librarian"
+art = ExtResource("1_3ubkn")
+cost = 0
+hp = 250
+attack = 0
+duration = 0
+element = 2
+category = 0
+passive_name = ""
+passive_description = ""
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 0
+refcard = Array[ExtResource("1_alvkl")]([])
+set_name = 0
+set_number = "3"
+rarity = 0

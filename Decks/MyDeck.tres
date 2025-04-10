@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="deck" load_steps=16 format=3 uid="uid://cq0nmjmtrspdh"]
+
+[ext_resource type="Resource" uid="uid://bpeancuiyp4uf" path="res://Cards/Coral Beach/Torobbie.tres" id="1_400qv"]
+[ext_resource type="Script" uid="uid://0f367x1nqdnc" path="res://Resources/deck.gd" id="1_gkgmv"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_lcx1f"]
+[ext_resource type="Resource" uid="uid://bubowk7n34pqy" path="res://Cards/Coral Beach/Tottochi.tres" id="2_y1j5p"]
+[ext_resource type="Resource" uid="uid://cj722kmhc3h7s" path="res://Cards/Coral Beach/Bad Fury.tres" id="3_0yvrq"]
+[ext_resource type="Resource" uid="uid://c5xn1qiit1ga3" path="res://Cards/Coral Beach/Little Cora.tres" id="4_g33js"]
+[ext_resource type="Resource" uid="uid://dgo1e7xjtfcms" path="res://Cards/Base/Monkey T.tres" id="5_im0py"]
+[ext_resource type="Resource" uid="uid://ciwwf07umtmi7" path="res://Cards/Coral Beach/Bustshell.tres" id="6_kafsj"]
+[ext_resource type="Resource" uid="uid://dx6qh42oyb4y5" path="res://Cards/Coral Beach/Blue Penguin.tres" id="7_nyyhw"]
+[ext_resource type="Resource" uid="uid://ce1ui2xf6bwle" path="res://Cards/Coral Beach/Clione.tres" id="8_sv5fc"]
+[ext_resource type="Resource" uid="uid://dwgbrswysr7bl" path="res://Cards/Coral Beach/Blooming Cora.tres" id="9_61bp0"]
+[ext_resource type="Resource" uid="uid://mphrbspsjxqt" path="res://Cards/Base/Mana Storm.tres" id="10_iy16y"]
+[ext_resource type="Resource" uid="uid://oo22hswqpqkj" path="res://Cards/Base/Librarian.tres" id="11_ahr6x"]
+[ext_resource type="Resource" uid="uid://bm2hyk3070r7k" path="res://Cards/Base/Bard.tres" id="12_ctj37"]
+[ext_resource type="Resource" uid="uid://b7bf2ui1o7t6c" path="res://Cards/Base/Soul Master.tres" id="13_korxo"]
+
+[resource]
+script = ExtResource("1_gkgmv")
+trickster = Array[ExtResource("1_lcx1f")]([ExtResource("11_ahr6x"), ExtResource("12_ctj37"), ExtResource("13_korxo")])
+cards = Array[ExtResource("1_lcx1f")]([ExtResource("1_400qv"), ExtResource("1_400qv"), ExtResource("1_400qv"), ExtResource("2_y1j5p"), ExtResource("2_y1j5p"), ExtResource("2_y1j5p"), ExtResource("3_0yvrq"), ExtResource("3_0yvrq"), ExtResource("3_0yvrq"), ExtResource("4_g33js"), ExtResource("4_g33js"), ExtResource("6_kafsj"), ExtResource("6_kafsj"), ExtResource("7_nyyhw"), ExtResource("7_nyyhw"), ExtResource("8_sv5fc"), ExtResource("8_sv5fc"), ExtResource("9_61bp0"), ExtResource("5_im0py"), ExtResource("10_iy16y")])

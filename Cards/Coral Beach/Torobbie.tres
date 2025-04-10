@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://bpeancuiyp4uf"]
+
+[ext_resource type="Texture2D" uid="uid://bhb12155d38ne" path="res://Art/Unit/Torobbie.png" id="1_vyycj"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="2_ci8n8"]
+
+[resource]
+script = ExtResource("2_ci8n8")
+type = 0
+name = "Torobbie"
+art = ExtResource("1_vyycj")
+cost = 1
+hp = 60
+attack = 20
+duration = 0
+element = 4
+category = 0
+passive_name = "Carrot Snack"
+passive_description = "Restore 10 HP after attacking."
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 1
+passive_magnitude = 10
+refcard = Array[ExtResource("2_ci8n8")]([])
+set_name = 1
+set_number = "1"
+rarity = 0

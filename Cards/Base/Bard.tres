@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://bm2hyk3070r7k"]
+
+[ext_resource type="Texture2D" uid="uid://ndgwjyuaqkpf" path="res://Art/Trickster/Bard.png" id="1_we83c"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="3_4i8wt"]
+
+[resource]
+script = ExtResource("3_4i8wt")
+type = 6
+name = "Bard"
+art = ExtResource("1_we83c")
+cost = 0
+hp = 300
+attack = 0
+duration = 0
+element = 2
+category = 0
+passive_name = ""
+passive_description = ""
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 0
+refcard = Array[ExtResource("3_4i8wt")]([])
+set_name = 0
+set_number = "11"
+rarity = 1

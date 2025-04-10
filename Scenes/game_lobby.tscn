@@ -1,0 +1,604 @@
+[gd_scene load_steps=19 format=3 uid="uid://dcqftrfv4nou5"]
+
+[ext_resource type="Script" uid="uid://dw2rj8q68rhv6" path="res://Scenes/player.gd" id="1_an1v0"]
+[ext_resource type="Texture2D" uid="uid://bltgcohdt7luf" path="res://Art/Parts/Card Back.png" id="1_mjt8g"]
+[ext_resource type="Script" uid="uid://ub6x2xgmjmod" path="res://System/game.gd" id="1_nkto6"]
+[ext_resource type="Resource" uid="uid://cq0nmjmtrspdh" path="res://Decks/MyDeck.tres" id="2_32gou"]
+[ext_resource type="PackedScene" uid="uid://r6h5hl2hknw5" path="res://Cards/card_scene.tscn" id="6_no6vx"]
+[ext_resource type="AudioStream" uid="uid://lrr0fsqmh0ql" path="res://Audio/SFX/ui_user_open.wav" id="8_hbche"]
+[ext_resource type="AudioStream" uid="uid://dpkip3mex4m1v" path="res://Audio/SFX/ui_user_close.wav" id="9_lkeu6"]
+[ext_resource type="FontFile" uid="uid://ckueavn23q31j" path="res://System/tahomabd.ttf" id="12_m48eh"]
+[ext_resource type="FontFile" uid="uid://cny6q1afmskf3" path="res://System/tahoma.ttf" id="12_tebpy"]
+[ext_resource type="AudioStream" uid="uid://c853myqp8yxpm" path="res://Audio/BGM/cb_cardbattle_bgm.mp3" id="14_0wknx"]
+[ext_resource type="Script" uid="uid://c41ghky0f8aw3" path="res://Scenes/DEBUG.gd" id="17_wtwak"]
+
+[sub_resource type="Sky" id="Sky_7rh21"]
+
+[sub_resource type="Environment" id="Environment_3k5ap"]
+background_color = Color(0.423529, 0.435294, 0.670588, 1)
+sky = SubResource("Sky_7rh21")
+
+[sub_resource type="Curve" id="Curve_ya6lt"]
+_data = [Vector2(0, 0), 0.0, 3.80507, 0, 0, Vector2(0.504918, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.80507, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Theme" id="Theme_iwi50"]
+default_font = ExtResource("12_m48eh")
+default_font_size = 40
+
+[sub_resource type="Animation" id="Animation_6kx5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1291, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Preview:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("In:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Out:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_i525v"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Card:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8, 1, 1.5, 2),
+"transitions": PackedFloat32Array(0.31864, 1, 0.31864, 0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(423, 1000), Vector2(423, 10), Vector2(423, 10), Vector2(423, 1000), Vector2(306, 10), Vector2(-691, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Preview:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("In:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Out:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjnaf"]
+_data = {
+&"RESET": SubResource("Animation_6kx5w"),
+&"reveal": SubResource("Animation_i525v")
+}
+
+[node name="GameLobby" type="Node3D"]
+
+[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.351676, 0.717032, -0.601821, 0.361763, 0.69704, 0.619083, 0.863396, 2.57312e-08, -0.504528, -9.38581, 2.6654, 0)
+light_energy = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 7.2, 6)
+environment = SubResource("Environment_3k5ap")
+current = true
+fov = 70.0
+
+[node name="Game Board" type="Node3D" parent="."]
+script = ExtResource("1_nkto6")
+
+[node name="Player" type="Node3D" parent="Game Board"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
+script = ExtResource("1_an1v0")
+player_name = "Velvetcake"
+d = ExtResource("2_32gou")
+height_curve = SubResource("Curve_ya6lt")
+
+[node name="Markers" type="Node3D" parent="Game Board/Player"]
+
+[node name="Field" type="Label3D" parent="Game Board/Player/Markers"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+sorting_offset = -10.0
+render_priority = -8
+outline_render_priority = -9
+text = "Field Area"
+font = ExtResource("12_m48eh")
+font_size = 64
+
+[node name="FieldSlot" type="Sprite3D" parent="Game Board/Player/Markers/Field"]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="NPC Zone" type="Label3D" parent="Game Board/Player/Markers"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, 2)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "NPC Zone"
+font = ExtResource("12_m48eh")
+font_size = 48
+
+[node name="FieldSlot" type="Sprite3D" parent="Game Board/Player/Markers/NPC Zone"]
+transform = Transform3D(1, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Graveyard" type="Label3D" parent="Game Board/Player/Markers"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6, 0, 0)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Graveyard"
+font = ExtResource("12_tebpy")
+font_size = 42
+
+[node name="GraveyardSlot" type="Sprite3D" parent="Game Board/Player/Markers/Graveyard"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Region" type="Label3D" parent="Game Board/Player/Markers"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -6, 0, 0)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Region"
+font = ExtResource("12_tebpy")
+font_size = 48
+
+[node name="RegionSlot" type="Sprite3D" parent="Game Board/Player/Markers/Region"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Trickster" type="Label3D" parent="Game Board/Player/Markers"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 2)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Trickster"
+font = ExtResource("12_tebpy")
+font_size = 48
+
+[node name="RegionSlot" type="Sprite3D" parent="Game Board/Player/Markers/Trickster"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Field" type="Node3D" parent="Game Board/Player"]
+
+[node name="Graveyard" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Region" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Deck" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="Count" type="Label3D" parent="Game Board/Player/Deck"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.01, 0)
+pixel_size = 0.01
+no_depth_test = true
+render_priority = 1
+outline_render_priority = 0
+text = "20"
+font = ExtResource("12_m48eh")
+font_size = 75
+
+[node name="CardBack" type="Sprite3D" parent="Game Board/Player/Deck"]
+transform = Transform3D(0.206285, 0, 0, 0, 0.206285, 0, 0, 0, 0.206285, 0, -0.05, 0)
+axis = 1
+shaded = true
+double_sided = false
+texture = ExtResource("1_mjt8g")
+
+[node name="NPC Zone" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Trickster" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="CardScene" parent="Game Board/Player/Trickster" instance=ExtResource("6_no6vx")]
+
+[node name="Hand" type="Node3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 3.5, 4.5)
+
+[node name="SP" type="Label3D" parent="Game Board/Player"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -7.5, 0.01, 1)
+pixel_size = 0.01
+modulate = Color(0.337255, 0.686275, 0.890196, 1)
+outline_modulate = Color(0.054902, 0.360784, 0.541176, 1)
+text = "0"
+font = ExtResource("12_m48eh")
+font_size = 100
+outline_size = 20
+
+[node name="Label" type="Label3D" parent="Game Board/Player/SP"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
+pixel_size = 0.01
+modulate = Color(0.337255, 0.686275, 0.890196, 1)
+outline_modulate = Color(0.054902, 0.360784, 0.541176, 1)
+text = "Summon
+Points"
+font = ExtResource("12_m48eh")
+font_size = 20
+outline_size = 5
+
+[node name="Enemy" type="Node3D" parent="Game Board"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.5)
+script = ExtResource("1_an1v0")
+player_name = "Bunny Maid"
+d = ExtResource("2_32gou")
+height_curve = SubResource("Curve_ya6lt")
+is_AI = true
+
+[node name="Markers" type="Node3D" parent="Game Board/Enemy"]
+
+[node name="Field" type="Label3D" parent="Game Board/Enemy/Markers"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 0, 0)
+sorting_offset = -10.0
+render_priority = -8
+outline_render_priority = -9
+text = "Field Area"
+font = ExtResource("12_m48eh")
+font_size = 64
+
+[node name="FieldSlot" type="Sprite3D" parent="Game Board/Enemy/Markers/Field"]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="NPC Zone" type="Label3D" parent="Game Board/Enemy/Markers"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -4, 0, 2)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "NPC Zone"
+font = ExtResource("12_m48eh")
+font_size = 48
+
+[node name="FieldSlot" type="Sprite3D" parent="Game Board/Enemy/Markers/NPC Zone"]
+transform = Transform3D(1, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Graveyard" type="Label3D" parent="Game Board/Enemy/Markers"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 6, 0, 0)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Graveyard"
+font = ExtResource("12_tebpy")
+font_size = 42
+
+[node name="GraveyardSlot" type="Sprite3D" parent="Game Board/Enemy/Markers/Graveyard"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Region" type="Label3D" parent="Game Board/Enemy/Markers"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -6, 0, 0)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Region"
+font = ExtResource("12_tebpy")
+font_size = 48
+
+[node name="RegionSlot" type="Sprite3D" parent="Game Board/Enemy/Markers/Region"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Trickster" type="Label3D" parent="Game Board/Enemy/Markers"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 0, 2)
+sorting_offset = -10.0
+no_depth_test = true
+render_priority = -8
+outline_render_priority = -9
+text = "Trickster"
+font = ExtResource("12_tebpy")
+font_size = 48
+
+[node name="RegionSlot" type="Sprite3D" parent="Game Board/Enemy/Markers/Trickster"]
+transform = Transform3D(0.206285, 0, 0, 0, -9.017e-09, -0.206285, 0, 0.206285, -9.017e-09, 0, 0, 0)
+modulate = Color(0, 0, 0, 0.333333)
+axis = 1
+shaded = true
+double_sided = false
+no_depth_test = true
+render_priority = -10
+texture = ExtResource("1_mjt8g")
+
+[node name="Field" type="Node3D" parent="Game Board/Enemy"]
+
+[node name="Graveyard" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Region" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Deck" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="Count" type="Label3D" parent="Game Board/Enemy/Deck"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 0.01, 0)
+pixel_size = 0.01
+no_depth_test = true
+render_priority = 1
+outline_render_priority = 0
+text = "20"
+font = ExtResource("12_m48eh")
+font_size = 75
+
+[node name="CardBack" type="Sprite3D" parent="Game Board/Enemy/Deck"]
+transform = Transform3D(0.206285, 0, 0, 0, 0.206285, 0, 0, 0, 0.206285, 0, -0.05, 0)
+axis = 1
+shaded = true
+double_sided = false
+texture = ExtResource("1_mjt8g")
+
+[node name="NPC Zone" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Trickster" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="CardScene" parent="Game Board/Enemy/Trickster" instance=ExtResource("6_no6vx")]
+
+[node name="Hand" type="Node3D" parent="Game Board/Enemy"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 2.84182, 2.98361)
+
+[node name="SP" type="Label3D" parent="Game Board/Enemy"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -7.5, 0.01, 1)
+pixel_size = 0.01
+modulate = Color(0.337255, 0.686275, 0.890196, 1)
+outline_modulate = Color(0.054902, 0.360784, 0.541176, 1)
+text = "0"
+font = ExtResource("12_m48eh")
+font_size = 100
+outline_size = 20
+
+[node name="Label" type="Label3D" parent="Game Board/Enemy/SP"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
+pixel_size = 0.01
+modulate = Color(0.337255, 0.686275, 0.890196, 1)
+outline_modulate = Color(0.054902, 0.360784, 0.541176, 1)
+text = "Summon
+Points"
+font = ExtResource("12_m48eh")
+font_size = 20
+outline_size = 5
+
+[node name="Label3D" type="Label3D" parent="Game Board"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.2, 0)
+text = "Player's Turn"
+font = ExtResource("12_m48eh")
+font_size = 124
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_iwi50")
+
+[node name="End Turn" type="Button" parent="UI"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 210.0
+offset_bottom = 106.0
+focus_mode = 0
+disabled = true
+text = "End Turn"
+
+[node name="Preview" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = -344.0
+offset_right = -23.0
+offset_bottom = 76.0
+grow_horizontal = 0
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Reveal" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Reveal"]
+libraries = {
+"": SubResource("AnimationLibrary_qjnaf")
+}
+
+[node name="Card" type="TextureRect" parent="UI/Reveal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 651.0
+offset_top = -350.0
+offset_right = 1150.99
+offset_bottom = 350.003
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(250, 350)
+texture = ExtResource("1_mjt8g")
+expand_mode = 1
+
+[node name="In" type="AudioStreamPlayer" parent="UI/Reveal"]
+stream = ExtResource("8_hbche")
+bus = &"SFX"
+
+[node name="Out" type="AudioStreamPlayer" parent="UI/Reveal"]
+stream = ExtResource("9_lkeu6")
+bus = &"SFX"
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_0wknx")
+bus = &"BGM"
+
+[node name="DEBUG" type="Node" parent="."]
+script = ExtResource("17_wtwak")
+
+[node name="sound" type="AudioStreamPlayer" parent="DEBUG"]
+stream = ExtResource("8_hbche")
+
+[connection signal="pressed" from="UI/End Turn" to="Game Board/Player" method="_on_end_turn_pressed"]

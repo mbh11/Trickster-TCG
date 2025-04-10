@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://bobb7455rsixy"]
+
+[ext_resource type="Texture2D" uid="uid://cktmgirssssuy" path="res://Art/Unit/Addax.png" id="1_a7y2h"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_ueo8c"]
+
+[resource]
+script = ExtResource("1_ueo8c")
+type = 0
+name = "Addax"
+art = ExtResource("1_a7y2h")
+cost = 5
+hp = 80
+attack = 50
+duration = 0
+element = 1
+category = 0
+passive_name = "Two-Horn Strike"
+passive_description = "This card can attack an extra time."
+passive_trigger = 4
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 7
+passive_magnitude = 1
+refcard = Array[ExtResource("1_ueo8c")]([])
+set_name = 1
+set_number = "9"
+rarity = 0

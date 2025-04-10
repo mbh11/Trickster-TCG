@@ -1,0 +1,232 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6nc1g3coah1s"]
+
+[ext_resource type="Script" path="res://Scenes/Hand.gd" id="1_lroer"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_so2bg"]
+line_spacing = 0.0
+font_size = 80
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 2
+offset_left = 1081.0
+offset_top = 356.0
+offset_right = 4605.0
+offset_bottom = 1760.0
+rotation = 3.14159
+scale = Vector2(0.25, 0.25)
+
+[node name="Front" type="HBoxContainer" parent="Enemy"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Region" type="PanelContainer" parent="Enemy/Front"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Front/Region"]
+layout_mode = 2
+text = "Region"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Field" type="HBoxContainer" parent="Enemy/Front"]
+custom_minimum_size = Vector2(2516, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Graveyard" type="PanelContainer" parent="Enemy/Front"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Front/Graveyard"]
+layout_mode = 2
+text = "Graveyard"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Back" type="HBoxContainer" parent="Enemy"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="S1" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/S1"]
+layout_mode = 2
+text = "Skill 1"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="S2" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/S2"]
+layout_mode = 2
+text = "Skill 2
+"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="S3" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/S3"]
+layout_mode = 2
+text = "Skill 3
+"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Trickster" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/Trickster"]
+layout_mode = 2
+text = "Trickster"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="NPC Zone" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(1004, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/NPC Zone"]
+layout_mode = 2
+text = "NPC Zone"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Deck" type="PanelContainer" parent="Enemy/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Enemy/Back/Deck"]
+layout_mode = 2
+text = "Deck
+"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Player" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 199.5
+offset_top = 364.0
+offset_right = 3723.5
+offset_bottom = 1768.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.25, 0.25)
+
+[node name="Front" type="HBoxContainer" parent="Player"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Region" type="PanelContainer" parent="Player/Front"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/Front/Region"]
+layout_mode = 2
+text = "Region"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Field" type="HBoxContainer" parent="Player/Front"]
+custom_minimum_size = Vector2(2516, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Graveyard" type="PanelContainer" parent="Player/Front"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/Front/Graveyard"]
+layout_mode = 2
+text = "Graveyard"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Back" type="HBoxContainer" parent="Player"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="NPC Zone" type="PanelContainer" parent="Player/Back"]
+custom_minimum_size = Vector2(1506, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/Back/NPC Zone"]
+layout_mode = 2
+text = "NPC Zone"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Trickster" type="PanelContainer" parent="Player/Back"]
+custom_minimum_size = Vector2(500, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Player/Back/Trickster"]
+layout_mode = 2
+text = "Trickster"
+label_settings = SubResource("LabelSettings_so2bg")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Deck" type="PanelContainer" parent="Player/Back"]
+custom_minimum_size = Vector2(1506, 700)
+layout_mode = 2
+
+[node name="Card Preview" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 460.0
+offset_top = -20.0
+offset_right = 460.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.66, 0.66)
+
+[node name="Hand" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+script = ExtResource("1_lroer")

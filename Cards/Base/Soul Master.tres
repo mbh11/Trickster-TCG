@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://b7bf2ui1o7t6c"]
+
+[ext_resource type="Texture2D" uid="uid://bpuy6l8rfnj5t" path="res://Art/Trickster/Soul Master.png" id="1_pvr21"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="3_yuf6o"]
+
+[resource]
+script = ExtResource("3_yuf6o")
+type = 6
+name = "Soul Master"
+art = ExtResource("1_pvr21")
+cost = 0
+hp = 400
+attack = 0
+duration = 0
+element = 2
+category = 0
+passive_name = ""
+passive_description = ""
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 0
+refcard = Array[ExtResource("3_yuf6o")]([])
+set_name = 0
+set_number = "19"
+rarity = 2

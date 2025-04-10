@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://dwgbrswysr7bl"]
+
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_dtv2b"]
+[ext_resource type="Texture2D" uid="uid://bcmeq5ow7mqi1" path="res://Art/Region/Blooming Cora.png" id="1_vi4ae"]
+
+[resource]
+script = ExtResource("1_dtv2b")
+type = 5
+name = "Blooming Cora"
+art = ExtResource("1_vi4ae")
+cost = 4
+hp = 0
+attack = 0
+duration = 0
+element = 0
+category = 0
+passive_name = ""
+passive_description = ""
+passive_trigger = 0
+passive_target = 0
+passive_filter = 0
+passive_filter_magnitude = 0
+passive_effect = 0
+passive_magnitude = 0
+refcard = Array[ExtResource("1_dtv2b")]([])
+set_name = 1
+set_number = ""
+rarity = 0
