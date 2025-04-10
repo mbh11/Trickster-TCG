@@ -1,16 +1,31 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcqftrfv4nou5"]
+[gd_scene load_steps=36 format=3 uid="uid://dcqftrfv4nou5"]
 
 [ext_resource type="Script" uid="uid://dw2rj8q68rhv6" path="res://Scenes/player.gd" id="1_an1v0"]
 [ext_resource type="Texture2D" uid="uid://bltgcohdt7luf" path="res://Art/Parts/Card Back.png" id="1_mjt8g"]
 [ext_resource type="Script" uid="uid://ub6x2xgmjmod" path="res://System/game.gd" id="1_nkto6"]
-[ext_resource type="Resource" uid="uid://cq0nmjmtrspdh" path="res://Decks/MyDeck.tres" id="2_32gou"]
+[ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="3_4iu7o"]
+[ext_resource type="Resource" uid="uid://bpeancuiyp4uf" path="res://Cards/Coral Beach/Torobbie.tres" id="4_rs1lg"]
+[ext_resource type="Resource" uid="uid://bubowk7n34pqy" path="res://Cards/Coral Beach/Tottochi.tres" id="5_fvykw"]
+[ext_resource type="Resource" uid="uid://cj722kmhc3h7s" path="res://Cards/Coral Beach/Bad Fury.tres" id="6_h6a4t"]
 [ext_resource type="PackedScene" uid="uid://r6h5hl2hknw5" path="res://Cards/card_scene.tscn" id="6_no6vx"]
+[ext_resource type="Resource" uid="uid://c5xn1qiit1ga3" path="res://Cards/Coral Beach/Little Cora.tres" id="7_3qwib"]
+[ext_resource type="Resource" uid="uid://ciwwf07umtmi7" path="res://Cards/Coral Beach/Bustshell.tres" id="8_03axf"]
 [ext_resource type="AudioStream" uid="uid://lrr0fsqmh0ql" path="res://Audio/SFX/ui_user_open.wav" id="8_hbche"]
+[ext_resource type="Resource" uid="uid://dx6qh42oyb4y5" path="res://Cards/Coral Beach/Blue Penguin.tres" id="9_atbie"]
 [ext_resource type="AudioStream" uid="uid://dpkip3mex4m1v" path="res://Audio/SFX/ui_user_close.wav" id="9_lkeu6"]
+[ext_resource type="Resource" uid="uid://ce1ui2xf6bwle" path="res://Cards/Coral Beach/Clione.tres" id="10_pw6x7"]
+[ext_resource type="Resource" uid="uid://dwgbrswysr7bl" path="res://Cards/Coral Beach/Blooming Cora.tres" id="11_il8cc"]
 [ext_resource type="FontFile" uid="uid://ckueavn23q31j" path="res://System/tahomabd.ttf" id="12_m48eh"]
 [ext_resource type="FontFile" uid="uid://cny6q1afmskf3" path="res://System/tahoma.ttf" id="12_tebpy"]
+[ext_resource type="Resource" uid="uid://dgo1e7xjtfcms" path="res://Cards/Base/Monkey T.tres" id="12_xxf5u"]
+[ext_resource type="Resource" uid="uid://mphrbspsjxqt" path="res://Cards/Base/Mana Storm.tres" id="13_ratii"]
 [ext_resource type="AudioStream" uid="uid://c853myqp8yxpm" path="res://Audio/BGM/cb_cardbattle_bgm.mp3" id="14_0wknx"]
+[ext_resource type="Script" uid="uid://0f367x1nqdnc" path="res://Resources/deck.gd" id="14_lkijb"]
+[ext_resource type="Resource" uid="uid://oo22hswqpqkj" path="res://Cards/Base/Librarian.tres" id="15_kpemj"]
+[ext_resource type="Resource" uid="uid://bm2hyk3070r7k" path="res://Cards/Base/Bard.tres" id="16_w2shk"]
+[ext_resource type="Resource" uid="uid://b7bf2ui1o7t6c" path="res://Cards/Base/Soul Master.tres" id="17_ntrag"]
 [ext_resource type="Script" uid="uid://c41ghky0f8aw3" path="res://Scenes/DEBUG.gd" id="17_wtwak"]
+[ext_resource type="AudioStream" uid="uid://i4dvvcxx1m68" path="res://Audio/SFX/eff_healing1.wav" id="26_rs1lg"]
 
 [sub_resource type="Sky" id="Sky_7rh21"]
 
@@ -18,9 +33,19 @@
 background_color = Color(0.423529, 0.435294, 0.670588, 1)
 sky = SubResource("Sky_7rh21")
 
+[sub_resource type="Resource" id="Resource_uulta"]
+script = ExtResource("14_lkijb")
+trickster = Array[ExtResource("3_4iu7o")]([ExtResource("15_kpemj"), ExtResource("16_w2shk"), ExtResource("17_ntrag")])
+cards = Array[ExtResource("3_4iu7o")]([ExtResource("4_rs1lg"), ExtResource("4_rs1lg"), ExtResource("4_rs1lg"), ExtResource("5_fvykw"), ExtResource("5_fvykw"), ExtResource("5_fvykw"), ExtResource("6_h6a4t"), ExtResource("6_h6a4t"), ExtResource("6_h6a4t"), ExtResource("7_3qwib"), ExtResource("7_3qwib"), ExtResource("8_03axf"), ExtResource("8_03axf"), ExtResource("9_atbie"), ExtResource("9_atbie"), ExtResource("10_pw6x7"), ExtResource("10_pw6x7"), ExtResource("11_il8cc"), ExtResource("12_xxf5u"), ExtResource("13_ratii")])
+
 [sub_resource type="Curve" id="Curve_ya6lt"]
 _data = [Vector2(0, 0), 0.0, 3.80507, 0, 0, Vector2(0.504918, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.80507, 0.0, 0, 0]
 point_count = 3
+
+[sub_resource type="Resource" id="Resource_unrkd"]
+script = ExtResource("14_lkijb")
+trickster = Array[ExtResource("3_4iu7o")]([ExtResource("15_kpemj"), ExtResource("16_w2shk"), ExtResource("17_ntrag")])
+cards = Array[ExtResource("3_4iu7o")]([ExtResource("4_rs1lg"), ExtResource("4_rs1lg"), ExtResource("4_rs1lg"), ExtResource("5_fvykw"), ExtResource("5_fvykw"), ExtResource("5_fvykw"), ExtResource("6_h6a4t"), ExtResource("6_h6a4t"), ExtResource("6_h6a4t"), ExtResource("7_3qwib"), ExtResource("7_3qwib"), ExtResource("8_03axf"), ExtResource("8_03axf"), ExtResource("9_atbie"), ExtResource("9_atbie"), ExtResource("10_pw6x7"), ExtResource("10_pw6x7"), ExtResource("11_il8cc"), ExtResource("12_xxf5u"), ExtResource("13_ratii")])
 
 [sub_resource type="Theme" id="Theme_iwi50"]
 default_font = ExtResource("12_m48eh")
@@ -177,7 +202,7 @@ script = ExtResource("1_nkto6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 script = ExtResource("1_an1v0")
 player_name = "Velvetcake"
-d = ExtResource("2_32gou")
+d = SubResource("Resource_uulta")
 height_curve = SubResource("Curve_ya6lt")
 
 [node name="Markers" type="Node3D" parent="Game Board/Player"]
@@ -345,7 +370,7 @@ outline_size = 5
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1.5)
 script = ExtResource("1_an1v0")
 player_name = "Bunny Maid"
-d = ExtResource("2_32gou")
+d = SubResource("Resource_unrkd")
 height_curve = SubResource("Curve_ya6lt")
 is_AI = true
 
@@ -563,7 +588,7 @@ mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Reveal"]
 libraries = {
-"": SubResource("AnimationLibrary_qjnaf")
+&"": SubResource("AnimationLibrary_qjnaf")
 }
 
 [node name="Card" type="TextureRect" parent="UI/Reveal"]
@@ -593,12 +618,14 @@ bus = &"SFX"
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_0wknx")
+autoplay = true
 bus = &"BGM"
 
 [node name="DEBUG" type="Node" parent="."]
 script = ExtResource("17_wtwak")
+cheatCard = ExtResource("10_pw6x7")
 
 [node name="sound" type="AudioStreamPlayer" parent="DEBUG"]
-stream = ExtResource("8_hbche")
+stream = ExtResource("26_rs1lg")
 
 [connection signal="pressed" from="UI/End Turn" to="Game Board/Player" method="_on_end_turn_pressed"]

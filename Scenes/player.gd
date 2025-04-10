@@ -122,14 +122,11 @@ func update_numbers():
 
 func trigger_turn_start():
 	var arr = []
-	for i in $Field.get_children():
-		arr.append(i)
-	for i in $Region.get_children():
-		arr.append(i)
-	for i in $"NPC Zone".get_children():
-		arr.append(i)
-	for i in $"Trickster".get_children():
-		arr.append(i)
+	arr += $Field.get_children()
+	arr += $Region.get_children()
+	arr += $"NPC Zone".get_children()
+	arr += $Trickster.get_children()
+
 	for i in arr:
 		i.passive_used = false
 		i.has_attacked = false
@@ -139,15 +136,20 @@ func trigger_turn_start():
 
 func trigger_turn_end():
 	var arr = []
-	for i in $Field.get_children():
-		arr.append(i)
-	for i in $Region.get_children():
-		arr.append(i)
-	for i in $"NPC Zone".get_children():
-		arr.append(i)
+	arr += $Field.get_children()
+	arr += $Region.get_children()
+	arr += $"NPC Zone".get_children()
+	arr += $Trickster.get_children()
+	
 	for i in arr:
 		if i.c.passive_trigger == i.c.triggers.turnEnd:
 			i.activate_passive()
+	for i in $"NPC Zone".get_children():
+		i.duration -= 1
+		if i.duration <= 0:
+			i.to_graveyard()
+	for i in arr:
+		i.update_numbers()
 
 func _on_end_turn_pressed():
 	turn_end()

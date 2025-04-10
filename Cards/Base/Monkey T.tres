@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="card" load_steps=3 format=3 uid="uid://dgo1e7xjtfcms"]
+[gd_resource type="Resource" script_class="card" load_steps=4 format=3 uid="uid://dgo1e7xjtfcms"]
 
 [ext_resource type="Texture2D" uid="uid://btdeb2ylvx4v8" path="res://Art/NPC/Monkey T.png" id="1_dulbk"]
 [ext_resource type="Script" uid="uid://yovcvndgbj5y" path="res://Resources/card.gd" id="1_wn8ti"]
+[ext_resource type="Resource" uid="uid://u6uxatg6pkso" path="res://Cards/Base/Panacea.tres" id="3_fsfbg"]
 
 [resource]
 script = ExtResource("1_wn8ti")
@@ -20,9 +21,9 @@ passive_trigger = 5
 passive_target = 7
 passive_filter = 0
 passive_filter_magnitude = 0
-passive_effect = 5
+passive_effect = 6
 passive_magnitude = 1
-refcard = Array[ExtResource("1_wn8ti")]([])
+refcard = Array[ExtResource("1_wn8ti")]([ExtResource("3_fsfbg")])
 set_name = 0
 set_number = "1"
 rarity = 0
